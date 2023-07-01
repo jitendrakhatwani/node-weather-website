@@ -14,7 +14,8 @@ const forecast = (lat,lng,callback) =>{
             callback(undefined,{
                 location:location,
                 currentTemperature:response.body.current.temp_c + " degree celcius",
-                feelsLike:response.body.current.feelslike_c + " degree celcius"
+                feelsLike:response.body.current.feelslike_c + " degree celcius",
+                weatherCondition:response.body.current.condition.text
             })
         }
 
